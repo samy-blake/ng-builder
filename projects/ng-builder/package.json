@@ -11,6 +11,11 @@
       "type": "MIT"
     }
   ],
+  "keywords": [
+    "angular/cli",
+    "angular",
+    "builder"
+  ],
   "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
