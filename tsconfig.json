@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngBuilder": [
+        "dist/ng-builder"
+      ],
+      "ngBuilder/*": [
+        "dist/ng-builder/*"
+      ]
+    }
   }
 }

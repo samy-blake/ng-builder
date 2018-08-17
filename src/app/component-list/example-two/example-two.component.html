@@ -1,0 +1,9 @@
+<p>
+  {{data.content}}
+</p>
+<div *ngIf="edit">
+  <input type="text" [(ngModel)]="data.content">
+  <button (click)="saveEdit.emit(data)">
+    Save
+  </button>
+</div>

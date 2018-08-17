@@ -1,0 +1,10 @@
+<div>
+  <img [src]="data.src || ''" alt="">
+  <input type="text" *ngIf="edit" [(ngModel)]="data.src">
+</div>
+
+<div *ngIf="edit">
+  <button (click)="saveEdit.emit(data)">
+    save
+  </button>
+</div>
