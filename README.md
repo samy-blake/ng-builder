@@ -60,7 +60,10 @@ import { Builder } from 'ng-builder';
 export class ExampleOneComponent extends Builder implements OnInit {
 }
 ```
+
 __extends Builder__ is for the requierd imputs and output.
+
+
 | Name | Type | Description |
 |------|------|-------------|
 | data | Input | (any) This is the data for the component. Use attributes to seperate each data. |
