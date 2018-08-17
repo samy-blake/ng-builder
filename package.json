@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "lib:build": "ng build ngBuilder --prod",
+    "lib:prod": "cd dist/ng-builder && npm publish"
   },
   "private": true,
   "dependencies": {
