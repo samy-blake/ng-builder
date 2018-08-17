@@ -7,7 +7,7 @@ The ng-builder is a module to dynamicly build components. This Tool wrapps the a
 ## Use
 
 ```
-npm install ng-builder --save
+npm install @soeren_balke/ng-builder --save
 ```
 
 ### add your Builder Components
@@ -56,7 +56,7 @@ npm install ng-builder --save
 
 **component.ts**
 ```typescript
-import { Builder } from 'ng-builder';
+import { Builder } from '@soeren_balke/ng-builder';
 export class ExampleOneComponent extends Builder implements OnInit {
 }
 ```
@@ -108,7 +108,7 @@ export class ComponentListService {
 **app.component.ts**
 ```typescript
 import { ViewChild } from '@angular/core';
-import { NgBuilderComponent } from 'ng-builder';
+import { NgBuilderComponent } from '@soeren_balke/ng-builder';
 ```
 
 ```typescript
