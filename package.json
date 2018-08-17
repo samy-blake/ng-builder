@@ -11,7 +11,7 @@
     "lib:build": "ng build ngBuilder --prod",
     "lib:prod": "cd dist/ng-builder && npm publish --access=public"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",

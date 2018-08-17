@@ -1,5 +1,16 @@
 {
+  "author": "Sören Balke",
   "name": "@soeren_balke/ng-builder",
+  "homepage": "https://github.com/samy-blake/ng-builder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samy-blake/ng-builder"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
