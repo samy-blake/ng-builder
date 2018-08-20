@@ -171,3 +171,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Publish
 Run `npm run lib:build` to build the aot of library. Run `npm run lib:prod` to publish the build lib. 
+
+## Example
+Live Example: https://stackblitz.com/github/samy-blake/ng-builder 
