@@ -1,15 +1,10 @@
-import { Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Input, Output, EventEmitter } from '@angular/core';
 
 
-export class Builder implements OnInit {
+export class Builder {
   @Input() data: any;
   @Input() edit: boolean;
   @Output() saveEdit = new EventEmitter();
 
   constructor() {}
-
-  ngOnInit() {
-    this.data  = {};
-    this.edit = false;
-  }
 }
