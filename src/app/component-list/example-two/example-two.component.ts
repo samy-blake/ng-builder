@@ -13,6 +13,9 @@ export class ExampleTwoComponent extends Builder implements OnInit {
   }
 
   ngOnInit() {
+    this.data = {
+      content: ''
+    };
   }
 
 }

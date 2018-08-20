@@ -14,7 +14,7 @@ import { BuilderComponent } from './builder-component';
 export class NgBuilderComponent implements OnInit {
 
   private viewContainerRef: ViewContainerRef;
-  private renderdComonentList: BuilderComponent[] = [];
+  private renderdComonentList: BuilderComponent[];
 
   private componentList: BuilderComponent[];
   @Input('componentList')
@@ -35,10 +35,13 @@ export class NgBuilderComponent implements OnInit {
 
   ngOnInit() {
     this.viewContainerRef = this.builder.viewContainerRef;
+    this.renderdComonentList = [];
+    if(this.componentList && this.componentList.length > 0) {
+      this.generateComponentList();
+    }
   }
 
   generateComponentList() {
-    // this.viewContainerRef.clear();
 
     for (const key in this.componentList) {
       if (

@@ -24,18 +24,18 @@ export class AppComponent implements OnInit {
   }
 
   selectComponent(component) {
-    this.ngBuilderComponentList.push({
-      edit: false,
-      data: {
-        content: 'asdasd'
-      },
-      component: component
-    });
-
     // this.ngBuilderComponentList.push({
-    //   edit: true,
+    //   edit: false,
+    //   data: {
+    //     content: 'asdasd'
+    //   },
     //   component: component
     // });
+
+    this.ngBuilderComponentList.push({
+      edit: true,
+      component: component
+    });
 
     this.ngBuilder.generateComponentList();
   }

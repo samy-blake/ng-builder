@@ -13,6 +13,9 @@ export class ExampleOneComponent extends Builder implements OnInit {
   }
 
   ngOnInit() {
+    this.data = {
+      src: ''
+    };
   }
 
 }
