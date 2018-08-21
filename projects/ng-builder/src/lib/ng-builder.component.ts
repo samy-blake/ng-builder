@@ -54,6 +54,11 @@ export class NgBuilderComponent implements OnInit {
     }
   }
 
+  clearComponentList() {
+    this.viewContainerRef.clear();
+    this.renderdComonentList = [];
+  }
+
   private loadComponent(component, index) {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.component);
 
