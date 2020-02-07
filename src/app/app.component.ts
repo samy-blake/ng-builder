@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngBuilderComponentList = [];
 
-  @ViewChild(NgBuilderComponent) ngBuilder: NgBuilderComponent;
+  @ViewChild(NgBuilderComponent, { static: true }) ngBuilder: NgBuilderComponent;
 
   constructor(
     private componentList: ComponentListService
