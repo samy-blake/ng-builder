@@ -22,11 +22,6 @@ npm install @soeren_balke/ng-builder --save
     ExampleOneComponent,
     // ...
   ],
-  // this is very important!:
-  entryComponents: [
-    ExampleOneComponent,
-    // ...
-  ],
   exports: [
     ExampleOneComponent,
     // ...

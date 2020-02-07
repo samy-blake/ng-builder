@@ -13,10 +13,6 @@ import { ExampleTwoComponent } from './example-two/example-two.component';
     ExampleOneComponent,
     ExampleTwoComponent
   ],
-  entryComponents: [
-    ExampleOneComponent,
-    ExampleTwoComponent
-  ],
   exports: [
     ExampleOneComponent,
     ExampleTwoComponent
