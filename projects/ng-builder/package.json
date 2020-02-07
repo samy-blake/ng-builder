@@ -16,7 +16,6 @@
     "angular",
     "builder"
   ],
-  "version": "0.0.6",
-  "peerDependencies": {
-  }
+  "version": "0.0.7",
+  "peerDependencies": {}
 }
