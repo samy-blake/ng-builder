@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, Output, EventEmitter, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, Output, EventEmitter, ViewContainerRef, AfterContentInit } from '@angular/core';
 import { NgBuilderDirective } from './ng-builder.directive';
 import { BuilderComponent } from './builder-component';
 
@@ -26,7 +26,7 @@ export class NgBuilderComponent implements OnInit {
 
   @Output() saveComponent = new EventEmitter();
 
-  @ViewChild(NgBuilderDirective) builder: NgBuilderDirective;
+  @ViewChild(NgBuilderDirective, { static: true }) builder: NgBuilderDirective;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver
