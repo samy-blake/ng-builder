@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, Output, EventEmitter, ViewContainerRef } from '@angular/core';
 import { NgBuilderDirective } from './ng-builder.directive';
-import { NgBuilderService } from './ng-builder.service';
 import { BuilderComponent } from './builder-component';
 
 @Component({
