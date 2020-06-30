@@ -26,7 +26,7 @@ export class NgBuilderComponent implements OnInit {
 
   @Output() saveComponent = new EventEmitter();
 
-  @ViewChild(NgBuilderDirective, { static: true }) builder: NgBuilderDirective;
+  @ViewChild(NgBuilderDirective) builder: NgBuilderDirective;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver

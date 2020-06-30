@@ -1,6 +1,6 @@
 # ng-builder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 The ng-builder is a module to dynamicly build components. This Tool wrapps the angular viewContainerRef. The Components are easy to develop and use with data.
 
 
@@ -16,7 +16,6 @@ npm install @soeren_balke/ng-builder --save
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule // <!-- requiered for ngModel in your components
   ],
   declarations: [
     ExampleOneComponent,
@@ -70,6 +69,7 @@ __extends Builder__ is for the requierd imputs and output.
 <div>
   <img [src]="data.src || ''" alt="">
   <input type="text" *ngIf="edit" [(ngModel)]="data.src">
+  <!-- or formControl ;) -->
 </div>
 
 <!-- This is the Edit Part -->
