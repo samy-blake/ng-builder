@@ -61,10 +61,12 @@ export class NgBuilderComponent implements OnInit {
     /**
      * Remove Components
      */
-    for (let i = 0; i < this.renderdComonentList.length; i++) {
+    for (let i = this.renderdComonentList.length; i >= 0; i++) {
       if(!this.componentList.includes(this.renderdComonentList[i])) {
-        if(this.viewContainerRef.get(i))
+        if(this.viewContainerRef.get(i)) {
           this.viewContainerRef.remove(i);
+        }
+        this.renderdComonentList.splice(i, 1);
       }
     }
   }
