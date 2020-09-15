@@ -36,20 +36,36 @@ export class NgBuilderComponent implements OnInit {
     this.viewContainerRef = this.builder.viewContainerRef;
     this.renderdComonentList = [];
     if(this.componentList && this.componentList.length > 0) {
-      this.generateComponentList();
+      this.update();
     }
   }
 
-  generateComponentList() {
+  /**
+   * deprecated
+   */
+  public generateComponentList() {
+    this.update();
+  }
 
+  /**
+   * update rendert component list
+   */
+  public update() {
+    /**
+     * Add components
+     */
     for (const key in this.componentList) {
-      if (
-        this.renderdComonentList.includes(this.componentList[key])
-      ) {
-        continue;
+      this.loadComponent(this.componentList[key], key);
+    }
+
+    /**
+     * Remove Components
+     */
+    for (let i = 0; i < this.renderdComonentList.length; i++) {
+      if(!this.componentList.includes(this.renderdComonentList[i])) {
+        if(this.viewContainerRef.get(i))
+          this.viewContainerRef.remove(i);
       }
-      const component = this.componentList[key];
-      this.loadComponent(component, key);
     }
   }
 
@@ -59,6 +75,9 @@ export class NgBuilderComponent implements OnInit {
   }
 
   private loadComponent(component, index) {
+    if (this.renderdComonentList.includes(component)) {
+      return;
+    }
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.component);
 
     const componentRef = this.viewContainerRef.createComponent(componentFactory);
