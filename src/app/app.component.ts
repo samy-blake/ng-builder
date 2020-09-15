@@ -37,11 +37,13 @@ export class AppComponent implements OnInit {
       component: component
     });
 
-    this.ngBuilder.generateComponentList();
+    this.ngBuilder.update();
   }
 
   saveComponent(data) {
     console.log(data);
+    this.ngBuilderComponentList.splice(data.index, 1);
+    this.ngBuilder.update();
   }
 
 }
