@@ -78,8 +78,14 @@ export class NgBuilderComponent implements OnInit {
 
   private loadComponent(component, index) {
     if (this.renderdComonentList.includes(component)) {
-      return;
+      const oldComponentIndex = this.renderdComonentList.indexOf(component);
+      if(index === oldComponentIndex) {
+        return;
+      }
+      this.viewContainerRef.remove(oldComponentIndex);
+      this.renderdComonentList.splice(oldComponentIndex, 1);
     }
+
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.component);
 
     const componentRef = this.viewContainerRef.createComponent(componentFactory, index);
