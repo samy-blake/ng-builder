@@ -82,7 +82,7 @@ export class NgBuilderComponent implements OnInit {
     }
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.component);
 
-    const componentRef = this.viewContainerRef.createComponent(componentFactory);
+    const componentRef = this.viewContainerRef.createComponent(componentFactory, index);
     const componentInstance = (<any>componentRef.instance);
 
     if (component.data) {
@@ -97,7 +97,8 @@ export class NgBuilderComponent implements OnInit {
         data: data
       });
     });
-    this.renderdComonentList.push(component);
+    // this.renderdComonentList.push(component);
+    this.renderdComonentList.splice(index, 0, component);
   }
 
 }
