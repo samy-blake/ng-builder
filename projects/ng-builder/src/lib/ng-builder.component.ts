@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, Output, EventEmitter, ViewContainerRef, AfterContentInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ComponentFactoryResolver, Input, Output, EventEmitter, ViewContainerRef, AfterContentInit, ViewRef } from '@angular/core';
 import { NgBuilderDirective } from './ng-builder.directive';
 import { BuilderComponent } from './builder-component';
 
@@ -82,8 +82,11 @@ export class NgBuilderComponent implements OnInit {
       if(index === oldComponentIndex) {
         return;
       }
-      this.viewContainerRef.remove(oldComponentIndex);
+      const oldViewRef: ViewRef = this.viewContainerRef.get(oldComponentIndex);
+      this.viewContainerRef.move(oldViewRef, index);
       this.renderdComonentList.splice(oldComponentIndex, 1);
+      this.renderdComonentList.splice(index, 0, component);
+      return;
     }
 
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component.component);
